@@ -1,0 +1,12 @@
+{
+  "name": "@repo/backend",
+  "private": true,
+  "scripts": {
+    "tsc": "tsc --noEmit",
+    "lint": "eslint src --report-unused-disable-directives --no-error-on-unmatched-pattern"
+  },
+  "devDependencies": {
+    "@repo/eslint-config": "workspace:*",
+    "@repo/typescript-config": "workspace:*"
+  }
+}

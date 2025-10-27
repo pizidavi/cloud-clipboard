@@ -1,0 +1,21 @@
+{
+  "name": "cloud-clipboard",
+  "private": true,
+  "scripts": {
+    "prepare": "husky",
+    "backend": "pnpm --filter @repo/backend",
+    "gnome-extension": "pnpm --filter @repo/gnome-extension",
+    "tsc": "pnpm run -r tsc",
+    "format": "prettier --write .",
+    "lint": "pnpm run -r lint"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^20.1.0",
+    "@commitlint/config-conventional": "^20.0.0",
+    "eslint": "^9.38.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.2.6",
+    "prettier": "^3.6.2",
+    "typescript": "^5.9.3"
+  }
+}
