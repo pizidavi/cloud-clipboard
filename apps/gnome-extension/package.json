@@ -1,5 +1,6 @@
 {
   "name": "@repo/gnome-extension",
+  "version": "0.0.0",
   "private": true,
   "scripts": {
     "tsc": "tsc --noEmit",
@@ -8,5 +9,14 @@
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",
     "@repo/typescript-config": "workspace:*"
+  },
+  "lint-staged": {
+    "*.{mjs,cjs,json,jsonc,html,css,md,yml,yaml}": [
+      "prettier --write --ignore-unknown"
+    ],
+    "*.{js,jsx,ts,tsx}": [
+      "prettier --write --ignore-unknown",
+      "eslint --report-unused-disable-directives --no-warn-ignored --max-warnings 0 --no-error-on-unmatched-pattern"
+    ]
   }
 }

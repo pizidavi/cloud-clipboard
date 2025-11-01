@@ -1,19 +1,23 @@
 {
-  "name": "@repo/types",
+  "name": "@repo/database",
   "private": true,
   "exports": {
     ".": "./index.ts"
   },
   "scripts": {
+    "generate": "drizzle-kit generate",
+    "migrate": "drizzle-kit migrate",
     "tsc": "tsc --noEmit",
     "lint": "eslint src --report-unused-disable-directives --no-error-on-unmatched-pattern"
   },
   "peerDependencies": {
-    "zod": "*"
+    "@libsql/client": "^0.15.15",
+    "drizzle-orm": "^0.44.7"
   },
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",
-    "@repo/typescript-config": "workspace:*"
+    "@repo/typescript-config": "workspace:*",
+    "drizzle-kit": "^0.31.6"
   },
   "lint-staged": {
     "*.{mjs,cjs,json,jsonc,html,css,md,yml,yaml}": [

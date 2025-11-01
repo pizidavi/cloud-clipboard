@@ -1,12 +1,38 @@
 {
   "name": "@repo/backend",
+  "version": "0.0.0",
   "private": true,
   "scripts": {
+    "dev": "tsx --env-file=.env --watch src/index.ts",
     "tsc": "tsc --noEmit",
     "lint": "eslint src --report-unused-disable-directives --no-error-on-unmatched-pattern"
   },
+  "dependencies": {
+    "@hono/node-server": "^1.19.6",
+    "@hono/zod-validator": "^0.7.4",
+    "@libsql/client": "^0.15.15",
+    "drizzle-orm": "^0.44.7",
+    "hono": "^4.10.4",
+    "pino": "^10.1.0",
+    "pino-http": "^11.0.0",
+    "zod": "^4.1.12"
+  },
   "devDependencies": {
+    "@repo/database": "workspace:*",
     "@repo/eslint-config": "workspace:*",
-    "@repo/typescript-config": "workspace:*"
+    "@repo/types": "workspace:*",
+    "@repo/typescript-config": "workspace:*",
+    "@types/node": "^22",
+    "pino-pretty": "^13.1.2",
+    "tsx": "^4.20.6"
+  },
+  "lint-staged": {
+    "*.{mjs,cjs,json,jsonc,html,css,md,yml,yaml}": [
+      "prettier --write --ignore-unknown"
+    ],
+    "*.{js,jsx,ts,tsx}": [
+      "prettier --write --ignore-unknown",
+      "eslint --report-unused-disable-directives --no-warn-ignored --max-warnings 0 --no-error-on-unmatched-pattern"
+    ]
   }
 }

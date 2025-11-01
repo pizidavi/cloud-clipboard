@@ -5,6 +5,7 @@
     "prepare": "husky",
     "backend": "pnpm --filter @repo/backend",
     "gnome-extension": "pnpm --filter @repo/gnome-extension",
+    "database": "pnpm --filter @repo/database",
     "tsc": "pnpm run -r tsc",
     "format": "prettier --write .",
     "lint": "pnpm run -r lint"

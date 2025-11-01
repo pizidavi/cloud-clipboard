@@ -2,6 +2,9 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](./LICENSE)
 
+> [!IMPORTANT]  
+> This is a work in progress and is not ready for use
+
 Share your clipboard across multiple devices!
 
 ## Structure
