@@ -1,4 +1,8 @@
 import { defineConfig } from 'eslint/config';
 import config from '@repo/eslint-config';
 
-export default defineConfig(config);
+export default defineConfig(config, {
+  rules: {
+    'no-console': 'off',
+  },
+});

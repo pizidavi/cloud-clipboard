@@ -1,0 +1,7 @@
+{
+  "uuid": "cloud-clipboard@home.local",
+  "name": "Cloud Clipboard",
+  "description": "Sync your clipboard across devices using cloud storage.",
+  "settings-schema": "org.gnome.shell.extensions.cloud-clipboard",
+  "shell-version": ["45", "46", "47", "48", "49"]
+}

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<schemalist>
+  <schema id="org.gnome.shell.extensions.cloud-clipboard" path="/org/gnome/shell/extensions/cloud-clipboard/">
+    <key name="animate" type="b">
+      <default>true</default>
+      <summary>Animation</summary>
+      <description>Whether to animate window movement/resizing</description>
+    </key>
+    <key name="backend-url" type="s">
+      <default>""</default>
+      <summary>Backend URL</summary>
+      <description>The URL of the backend server</description>
+    </key>
+    <key name="user-key" type="s">
+      <default>""</default>
+      <summary>User Key</summary>
+      <description>Unique user key for authentication</description>
+    </key>
+  </schema>
+</schemalist>
